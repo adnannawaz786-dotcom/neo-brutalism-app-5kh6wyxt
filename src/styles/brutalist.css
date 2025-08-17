@@ -1,0 +1,269 @@
+/* Neo-Brutalist Custom Styles */
+
+/* Base brutalist variables */
+:root {
+  --brutalist-black: #000000;
+  --brutalist-white: #ffffff;
+  --brutalist-yellow: #ffff00;
+  --brutalist-pink: #ff00ff;
+  --brutalist-cyan: #00ffff;
+  --brutalist-green: #00ff00;
+  --brutalist-red: #ff0000;
+  --brutalist-blue: #0000ff;
+  --brutalist-shadow: 4px 4px 0px #000000;
+  --brutalist-shadow-lg: 8px 8px 0px #000000;
+  --brutalist-border: 3px solid #000000;
+}
+
+/* Brutalist typography */
+.brutalist-heading {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--brutalist-black);
+  text-shadow: 2px 2px 0px var(--brutalist-yellow);
+}
+
+.brutalist-text {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: var(--brutalist-black);
+}
+
+/* Brutalist containers */
+.brutalist-container {
+  background-color: var(--brutalist-white);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  transform: rotate(-1deg);
+}
+
+.brutalist-container:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: var(--brutalist-shadow-lg);
+  transition: all 0.2s ease-out;
+}
+
+.brutalist-card {
+  background-color: var(--brutalist-cyan);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  transform: rotate(0.5deg);
+}
+
+.brutalist-card:nth-child(even) {
+  background-color: var(--brutalist-pink);
+  transform: rotate(-0.5deg);
+}
+
+.brutalist-card:nth-child(3n) {
+  background-color: var(--brutalist-yellow);
+  transform: rotate(1deg);
+}
+
+/* Brutalist buttons */
+.brutalist-btn {
+  background-color: var(--brutalist-green);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  color: var(--brutalist-black);
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  transform: rotate(-1deg);
+}
+
+.brutalist-btn:hover {
+  transform: rotate(0deg) translateY(-2px);
+  box-shadow: 6px 6px 0px var(--brutalist-black);
+  background-color: var(--brutalist-yellow);
+}
+
+.brutalist-btn:active {
+  transform: rotate(0deg) translateY(0px);
+  box-shadow: 2px 2px 0px var(--brutalist-black);
+}
+
+.brutalist-btn-danger {
+  background-color: var(--brutalist-red);
+}
+
+.brutalist-btn-danger:hover {
+  background-color: var(--brutalist-pink);
+}
+
+.brutalist-btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  box-shadow: 2px 2px 0px var(--brutalist-black);
+}
+
+/* Brutalist inputs */
+.brutalist-input {
+  background-color: var(--brutalist-white);
+  border: var(--brutalist-border);
+  box-shadow: inset 2px 2px 0px var(--brutalist-black);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 0.75rem;
+  color: var(--brutalist-black);
+  transform: rotate(-0.5deg);
+}
+
+.brutalist-input:focus {
+  outline: none;
+  transform: rotate(0deg);
+  box-shadow: inset 4px 4px 0px var(--brutalist-yellow);
+  background-color: var(--brutalist-cyan);
+}
+
+/* Brutalist todo specific styles */
+.brutalist-todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--brutalist-white);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  transform: rotate(0.2deg);
+}
+
+.brutalist-todo-item.completed {
+  background-color: var(--brutalist-green);
+  opacity: 0.8;
+  transform: rotate(-0.3deg);
+}
+
+.brutalist-todo-item.completed .brutalist-todo-text {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--brutalist-black);
+}
+
+.brutalist-todo-text {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--brutalist-black);
+}
+
+.brutalist-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--brutalist-black);
+  background-color: var(--brutalist-white);
+  cursor: pointer;
+  position: relative;
+}
+
+.brutalist-checkbox:checked {
+  background-color: var(--brutalist-black);
+}
+
+.brutalist-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: var(--brutalist-white);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+/* Brutalist form styles */
+.brutalist-form {
+  background-color: var(--brutalist-pink);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transform: rotate(-0.5deg);
+}
+
+.brutalist-form-group {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Brutalist animations */
+@keyframes brutalist-shake {
+  0%, 100% { transform: rotate(-1deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-0.5deg); }
+  75% { transform: rotate(0.5deg); }
+}
+
+.brutalist-shake {
+  animation: brutalist-shake 0.5s ease-in-out;
+}
+
+@keyframes brutalist-pop {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1) rotate(-1deg); }
+}
+
+.brutalist-pop {
+  animation: brutalist-pop 0.3s ease-out;
+}
+
+/* Brutalist layout */
+.brutalist-app {
+  background: linear-gradient(45deg, var(--brutalist-yellow) 25%, var(--brutalist-cyan) 25%, var(--brutalist-cyan) 50%, var(--brutalist-pink) 50%, var(--brutalist-pink) 75%, var(--brutalist-green) 75%);
+  background-size: 40px 40px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.brutalist-main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--brutalist-white);
+  border: 5px solid var(--brutalist-black);
+  box-shadow: 12px 12px 0px var(--brutalist-black);
+  padding: 2rem;
+  transform: rotate(-0.5deg);
+}
+
+.brutalist-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--brutalist-yellow);
+  border: var(--brutalist-border);
+  box-shadow: var(--brutalist-shadow);
+  transform: rotate(1deg);
+}
+
+/* Responsive brutalist styles */
+@media (max-width: 768px) {
+  .brutalist-main {
+    margin: 1rem;
+    padding: 1rem;
+    transform: rotate(0deg);
+  }
+  
+  .brutalist-form-group {
+    flex-direction: column;
+  }
+  
+  .brutalist-todo-item {
+    padding: 0.75rem;
+    transform: rotate(0deg);
+  }
+  
+  .brutalist-app {
+    padding: 1rem;
+    background-size: 20px 20px;
+  }
+}
